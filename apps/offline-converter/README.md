@@ -33,17 +33,24 @@ Open `http://127.0.0.1:8765`.
 
 ### Windows and macOS
 
-Use the app as a bundled local server and wrap it with a native shell:
+Use the included build scripts to produce downloadable desktop artifacts.
 
-1. Build a Python runtime with this package installed.
-2. Start `markitdown-app --port 8765` from the shell process.
-3. Point the shell webview at `http://127.0.0.1:8765`.
+macOS:
 
-Practical shell options:
+```bash
+apps/offline-converter/connectors/macos/build-app-pkg.sh dist/macos-app
+```
 
-- Electron: easiest installer story and file associations.
-- Tauri: smaller desktop bundles, but Python sidecar setup takes more care.
-- Briefcase: Python-native packaging if you want to keep the shell in Python.
+Windows:
+
+```powershell
+apps\offline-converter\connectors\windows\build-app-exe.ps1 -OutputDir dist\windows-app
+choco install innosetup --no-progress -y
+& "${env:ProgramFiles(x86)}\Inno Setup 6\ISCC.exe" apps\offline-converter\connectors\windows\PageMintOffline.iss
+```
+
+The `Release Installers` GitHub Actions workflow builds both platforms and publishes
+downloadable artifacts. Tagged releases create a draft GitHub Release automatically.
 
 ### Android and Google Play
 

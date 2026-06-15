@@ -21,6 +21,33 @@ to call the connector, it can ask the connector to read files that the current u
 read. Keep it local, use trusted AI clients, and do not bind the connector to a public
 network interface.
 
+## Windows App Build
+
+Build the user-facing Windows app executable from the repository root:
+
+```powershell
+apps\offline-converter\connectors\windows\build-app-exe.ps1 -OutputDir dist\windows-app
+```
+
+Expected output:
+
+```text
+dist\windows-app\PageMint Offline.exe
+```
+
+Build the Windows installer after the app executable exists:
+
+```powershell
+choco install innosetup --no-progress -y
+& "${env:ProgramFiles(x86)}\Inno Setup 6\ISCC.exe" apps\offline-converter\connectors\windows\PageMintOffline.iss
+```
+
+Expected installer:
+
+```text
+dist\windows-installer\PageMintOfflineSetup.exe
+```
+
 ## Windows `.exe` Connector
 
 Build the Windows connector executable from the repository root:

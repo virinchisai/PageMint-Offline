@@ -48,12 +48,18 @@ reporting instructions and supported security assumptions.
 
 ## Packaging
 
-macOS build scripts are under `apps/offline-converter/connectors/macos`. Generated
-installers are intentionally excluded from Git because they must be signed and notarized
-before public distribution.
+Users can download desktop builds from GitHub Actions artifacts or GitHub Releases once a
+release tag is published.
 
-Windows connector binaries must be built on Windows. The Android/Play Store package is
-not implemented yet; the current Android notes describe a future packaging path.
+- macOS: `PageMintOfflineApp.pkg` installs `PageMint Offline.app` into `/Applications`.
+- Windows: `PageMintOfflineSetup.exe` installs the app; `PageMintOffline-Windows-app.zip`
+  contains the portable desktop executable.
+
+Generated installers are intentionally excluded from Git. See [RELEASING.md](RELEASING.md)
+for build, release, signing, and notarization notes.
+
+The Android/Play Store package is not implemented yet; the current Android notes describe
+a future packaging path.
 
 ## Licensing
 

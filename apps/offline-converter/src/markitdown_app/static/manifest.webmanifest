@@ -1,0 +1,11 @@
+{
+  "name": "PageMint Offline",
+  "short_name": "PageMint",
+  "description": "Private offline document-to-Markdown conversion for mixed file batches.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f5f1e8",
+  "theme_color": "#124e5c",
+  "orientation": "portrait-primary",
+  "categories": ["productivity", "utilities"]
+}

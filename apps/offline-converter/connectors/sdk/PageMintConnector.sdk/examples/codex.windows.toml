@@ -1,0 +1,3 @@
+[mcp_servers.pagemint]
+command = "C:\\Program Files\\PageMint\\PageMintConnector.exe"
+args = []

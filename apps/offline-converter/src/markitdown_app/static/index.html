@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#124e5c" />
+    <title>{{ app_name }}</title>
+    <link rel="manifest" href="/static/manifest.webmanifest" />
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="workspace" aria-label="PageMint Offline converter">
+        <div class="masthead">
+          <div class="brand-lockup">
+            <span class="brand-mark" aria-hidden="true">P</span>
+            <div>
+              <p class="eyebrow">Private document mint</p>
+              <h1>PageMint</h1>
+            </div>
+          </div>
+          <div class="mast-actions">
+            <a class="privacy-link" href="/privacy">Privacy</a>
+            <span class="limit">{{ max_upload_mb }} MB max</span>
+          </div>
+        </div>
+
+        <form id="convert-form" class="converter" method="post" action="/api/convert" enctype="multipart/form-data">
+          <label class="collection-field">
+            <span>Collection name</span>
+            <input id="collection-name" name="collection_name" type="text" maxlength="80" placeholder="Research notes, receipts, case files" />
+          </label>
+
+          <label id="drop-zone" class="drop-zone">
+            <input id="file-input" name="files" type="file" multiple />
+            <span class="drop-icon" aria-hidden="true">+</span>
+            <span class="drop-title">Mint markdown from mixed files</span>
+            <span class="drop-copy">PDF, Word, Excel, PowerPoint, HTML, CSV, JSON, images, ZIP, EPUB, audio, and plain text</span>
+          </label>
+
+          <div class="controls">
+            <fieldset class="segmented" aria-label="Output mode">
+              <label>
+                <input type="radio" name="mode" value="combined" checked />
+                <span>Combine</span>
+              </label>
+              <label>
+                <input type="radio" name="mode" value="separate" />
+                <span>Separate</span>
+              </label>
+            </fieldset>
+            <button id="convert-button" type="submit" disabled>Convert</button>
+          </div>
+        </form>
+
+        <section class="receipt-strip" aria-label="Privacy receipt">
+          <span>On-device workspace</span>
+          <span>Temporary processing</span>
+          <span>No account</span>
+        </section>
+
+        <section class="file-panel" aria-label="Selected files">
+          <div class="panel-heading">
+            <h2>Files</h2>
+            <span id="file-count" class="file-count">0 selected</span>
+            <button id="clear-button" type="button" disabled>Clear</button>
+          </div>
+          <ol id="file-list" class="file-list"></ol>
+          <p id="empty-state" class="empty-state">No files selected.</p>
+        </section>
+
+        <p id="status" class="status" role="status" aria-live="polite"></p>
+      </section>
+    </main>
+    <script src="/static/app.js"></script>
+  </body>
+</html>

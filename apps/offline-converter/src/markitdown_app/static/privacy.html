@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#124e5c" />
+    <title>Privacy - {{ app_name }}</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <article class="workspace legal-page">
+        <div class="masthead">
+          <div class="brand-lockup">
+            <span class="brand-mark" aria-hidden="true">P</span>
+            <div>
+              <p class="eyebrow">Privacy policy</p>
+              <h1>PageMint</h1>
+            </div>
+          </div>
+          <a class="privacy-link" href="/">Converter</a>
+        </div>
+
+        <h2>Local processing</h2>
+        <p>{{ app_name }} converts selected files on the device running the app. Uploaded files are written to a temporary processing folder and deleted when the request finishes.</p>
+
+        <h2>Data collection</h2>
+        <p>The app does not require an account, advertising ID, analytics SDK, or cloud upload for its offline conversion workflow. If you add crash reporting, analytics, sync, ads, or cloud conversion later, update this policy and the Google Play Data safety answers before release.</p>
+
+        <h2>Files</h2>
+        <p>Files chosen by the user are used only to detect format and generate Markdown output. Converted downloads are saved only where the user chooses to save them.</p>
+
+        <h2>Contact</h2>
+        <p>Contact the PageMint project maintainers through the public GitHub repository. Security vulnerabilities should be reported privately as described in the repository security policy.</p>
+      </article>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "pagemint-offline"
+version = "0.1.0"
+description = "Privacy-first offline document-to-Markdown converter app for desktop and mobile shells."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+dependencies = [
+  "flask>=3.0",
+  "waitress>=3.0",
+  "markitdown[docx,pdf,pptx,xls,xlsx]",
+]
+
+[project.optional-dependencies]
+connectors = [
+  "markitdown-mcp",
+]
+test = [
+  "pytest>=8.0",
+]
+
+[project.scripts]
+markitdown-app = "markitdown_app.server:main"
+pagemint-connector = "markitdown_app.connector:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/markitdown_app"]

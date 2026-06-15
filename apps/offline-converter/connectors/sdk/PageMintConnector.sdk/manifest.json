@@ -1,0 +1,32 @@
+{
+  "name": "PageMint Connector SDK",
+  "version": "0.1.0",
+  "protocol": "mcp",
+  "transport": "stdio",
+  "tools": [
+    {
+      "name": "convert_to_markdown",
+      "description": "Convert a file, web, or data URI into Markdown.",
+      "input": {
+        "type": "object",
+        "properties": {
+          "uri": {
+            "type": "string",
+            "description": "A file:, http:, https:, or data: URI."
+          }
+        },
+        "required": ["uri"]
+      },
+      "output": {
+        "type": "string",
+        "description": "Markdown content."
+      }
+    }
+  ],
+  "windows": {
+    "command": "C:\\Program Files\\PageMint\\PageMintConnector.exe"
+  },
+  "macos": {
+    "command": "/usr/local/bin/pagemint-connector"
+  }
+}

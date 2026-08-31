@@ -1,0 +1,23 @@
+{
+  "name": "PageMint privacy promises remain grounded",
+  "audience": "public",
+  "required_claims": [
+    "pagemint/privacy#cloud-upload-required",
+    "pagemint/privacy#temporary-file-retention",
+    "pagemint/connectors#public-network-binding"
+  ],
+  "required_sources": [
+    "apps/offline-converter/docs/privacy-policy-draft.md",
+    "apps/offline-converter/docs/desktop-connectors.md"
+  ],
+  "expected_values": {
+    "pagemint/privacy#cloud-upload-required": false,
+    "pagemint/privacy#temporary-file-retention": "deleted-after-conversion-request",
+    "pagemint/connectors#public-network-binding": false
+  },
+  "expected_classifications": {
+    "pagemint/privacy#cloud-upload-required": "public",
+    "pagemint/privacy#temporary-file-retention": "public",
+    "pagemint/connectors#public-network-binding": "public"
+  }
+}

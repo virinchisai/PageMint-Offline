@@ -1,0 +1,18 @@
+{
+  "id": "pagemint/connectors#public-network-binding",
+  "subject": "desktop-connector-security",
+  "predicate": "public_network_binding_allowed",
+  "value": false,
+  "sources": [{
+    "uri": "apps/offline-converter/docs/desktop-connectors.md",
+    "sha256": "22b6ec1a8717d4df61b006079b2012963ea359df11155206bdfe2865cde7c483",
+    "classification": "public"
+  }],
+  "classification": "public",
+  "audiences": ["public"],
+  "owner": "pagemint-maintainers",
+  "verified_at": "2026-08-31",
+  "stale_after": "2027-08-31",
+  "status": "stable",
+  "body": "The desktop connector must remain local and must not bind to a public network interface."
+}

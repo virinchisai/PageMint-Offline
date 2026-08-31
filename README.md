@@ -1,5 +1,7 @@
 # PageMint Offline
 
+[![Knowledge Reliability](https://github.com/virinchisai/PageMint-Offline/actions/workflows/knowledge-reliability.yml/badge.svg)](https://github.com/virinchisai/PageMint-Offline/actions/workflows/knowledge-reliability.yml)
+
 PageMint Offline is a privacy-focused local document-to-Markdown converter built on
 [Microsoft MarkItDown](https://github.com/microsoft/markitdown). It accepts mixed file
 batches, detects formats locally, and exports either one combined Markdown document or a

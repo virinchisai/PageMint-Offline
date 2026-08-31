@@ -1,0 +1,18 @@
+{
+  "id": "pagemint/privacy#temporary-file-retention",
+  "subject": "offline-conversion-privacy",
+  "predicate": "temporary_file_retention",
+  "value": "deleted-after-conversion-request",
+  "sources": [{
+    "uri": "apps/offline-converter/docs/privacy-policy-draft.md",
+    "sha256": "beaea1b6c622942e17fa24966a986f77115596095f2da617de3cd13291fea7f5",
+    "classification": "public"
+  }],
+  "classification": "public",
+  "audiences": ["public"],
+  "owner": "pagemint-maintainers",
+  "verified_at": "2026-08-31",
+  "stale_after": "2027-06-15",
+  "status": "stable",
+  "body": "Temporary uploaded files are deleted after the conversion request finishes."
+}
